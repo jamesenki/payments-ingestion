@@ -1,0 +1,185 @@
+name: Deploy Database Schema
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target environment'
+        required: true
+        type: choice
+        options:
+          - dev
+          - staging
+          - production
+      dry_run:
+        description: 'Dry run (preview changes without applying)'
+        required: false
+        type: boolean
+        default: false
+      confirm:
+        description: 'Type environment name to confirm deployment'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  validate-confirmation:
+    name: Validate Deployment Confirmation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Confirmation
+        run: |
+          if [ "${{ github.event.inputs.confirm }}" != "${{ github.event.inputs.environment }}" ]; then
+            echo "❌ Deployment requires exact environment name confirmation"
+            exit 1
+          fi
+          echo "✅ Deployment confirmed for ${{ github.event.inputs.environment }}"
+
+  deploy-schema:
+    name: Deploy Schema to ${{ github.event.inputs.environment }}
+    needs: validate-confirmation
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up PostgreSQL Client
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y postgresql-client
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: |
+            {
+              "clientId": "${{ secrets[format('{0}_AZURE_CLIENT_ID', github.event.inputs.environment == 'production' && 'PROD' || upper(github.event.inputs.environment))] }}",
+              "clientSecret": "${{ secrets[format('{0}_AZURE_CLIENT_SECRET', github.event.inputs.environment == 'production' && 'PROD' || upper(github.event.inputs.environment))] }}",
+              "subscriptionId": "${{ secrets[format('{0}_AZURE_SUBSCRIPTION_ID', github.event.inputs.environment == 'production' && 'PROD' || upper(github.event.inputs.environment))] }}",
+              "tenantId": "${{ secrets.AZURE_TENANT_ID }}"
+            }
+
+      - name: Get PostgreSQL Connection Info
+        id: get-db-info
+        run: |
+          ENV=${{ github.event.inputs.environment }}
+          
+          # Resource names based on environment
+          RG_NAME="payments-ingestion-${ENV}-rg"
+          PSQL_SERVER="payments-ingestion-${ENV}-psql-eus"
+          
+          # Get PostgreSQL FQDN
+          PSQL_FQDN=$(az postgres flexible-server show \
+            --resource-group $RG_NAME \
+            --name $PSQL_SERVER \
+            --query fullyQualifiedDomainName \
+            -o tsv)
+          
+          echo "DATABASE_HOST=$PSQL_FQDN" >> $GITHUB_OUTPUT
+          echo "✅ PostgreSQL server: $PSQL_FQDN"
+
+      - name: Test Database Connection
+        env:
+          DATABASE_HOST: ${{ steps.get-db-info.outputs.DATABASE_HOST }}
+          DATABASE_NAME: payments_db
+          DATABASE_USER: psqladmin
+          DATABASE_PASSWORD: ${{ secrets[format('{0}_POSTGRESQL_PASSWORD', github.event.inputs.environment == 'production' && 'PROD' || upper(github.event.inputs.environment))] }}
+        run: |
+          export PGPASSWORD="$DATABASE_PASSWORD"
+          echo "Testing connection to $DATABASE_HOST..."
+          
+          psql -h $DATABASE_HOST \
+               -U $DATABASE_USER \
+               -d $DATABASE_NAME \
+               -c "SELECT version();"
+          
+          echo "✅ Database connection successful"
+
+      - name: Deploy Schema (Dry Run)
+        if: github.event.inputs.dry_run == 'true'
+        env:
+          DATABASE_HOST: ${{ steps.get-db-info.outputs.DATABASE_HOST }}
+          DATABASE_NAME: payments_db
+          DATABASE_USER: psqladmin
+          DATABASE_PASSWORD: ${{ secrets[format('{0}_POSTGRESQL_PASSWORD', github.event.inputs.environment == 'production' && 'PROD' || upper(github.event.inputs.environment))] }}
+          DRY_RUN: "true"
+        run: |
+          chmod +x ./scripts/database/deploy-schema.sh
+          ./scripts/database/deploy-schema.sh ${{ github.event.inputs.environment }}
+
+      - name: Deploy Schema (Apply)
+        if: github.event.inputs.dry_run != 'true'
+        env:
+          DATABASE_HOST: ${{ steps.get-db-info.outputs.DATABASE_HOST }}
+          DATABASE_NAME: payments_db
+          DATABASE_USER: psqladmin
+          DATABASE_PASSWORD: ${{ secrets[format('{0}_POSTGRESQL_PASSWORD', github.event.inputs.environment == 'production' && 'PROD' || upper(github.event.inputs.environment))] }}
+          DRY_RUN: "false"
+        run: |
+          chmod +x ./scripts/database/deploy-schema.sh
+          ./scripts/database/deploy-schema.sh ${{ github.event.inputs.environment }}
+
+      - name: Validate Schema
+        env:
+          DATABASE_HOST: ${{ steps.get-db-info.outputs.DATABASE_HOST }}
+          DATABASE_NAME: payments_db
+          DATABASE_USER: psqladmin
+          DATABASE_PASSWORD: ${{ secrets[format('{0}_POSTGRESQL_PASSWORD', github.event.inputs.environment == 'production' && 'PROD' || upper(github.event.inputs.environment))] }}
+        run: |
+          chmod +x ./scripts/database/validate-schema.sh
+          ./scripts/database/validate-schema.sh
+
+      - name: Create Backup Snapshot Info
+        if: github.event.inputs.dry_run != 'true' && github.event.inputs.environment == 'production'
+        env:
+          DATABASE_HOST: ${{ steps.get-db-info.outputs.DATABASE_HOST }}
+          DATABASE_NAME: payments_db
+          DATABASE_USER: psqladmin
+          DATABASE_PASSWORD: ${{ secrets.PROD_POSTGRESQL_PASSWORD }}
+        run: |
+          export PGPASSWORD="$DATABASE_PASSWORD"
+          
+          echo "📊 Current database statistics:"
+          psql -h $DATABASE_HOST -U $DATABASE_USER -d $DATABASE_NAME \
+            -c "SELECT 
+                  schemaname,
+                  tablename,
+                  pg_size_pretty(pg_total_relation_size(schemaname||'.'||tablename)) AS size,
+                  n_live_tup AS row_count
+                FROM pg_tables
+                JOIN pg_stat_user_tables ON pg_tables.tablename = pg_stat_user_tables.relname
+                WHERE schemaname = 'public'
+                ORDER BY pg_total_relation_size(schemaname||'.'||tablename) DESC;"
+
+  notify-success:
+    name: Notify Deployment Success
+    needs: deploy-schema
+    if: success()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Success Notification
+        run: |
+          echo "✅ Database schema deployment completed successfully!"
+          echo "Environment: ${{ github.event.inputs.environment }}"
+          echo "Dry Run: ${{ github.event.inputs.dry_run }}"
+          echo "Deployed by: ${{ github.actor }}"
+          echo "Timestamp: $(date)"
+
+  notify-failure:
+    name: Notify Deployment Failure
+    needs: deploy-schema
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Failure Notification
+        run: |
+          echo "❌ Database schema deployment failed!"
+          echo "Environment: ${{ github.event.inputs.environment }}"
+          echo "Please check the logs and consider rollback if necessary."
+          exit 1
+

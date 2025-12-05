@@ -1,0 +1,139 @@
+name: Terraform Plan on PR
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'iac/**'
+      - '.github/workflows/terraform-*.yml'
+      - '.github/workflows/reusable-terraform.yml'
+
+permissions:
+  contents: read
+  pull-requests: write
+  id-token: write
+
+jobs:
+  detect-changes:
+    name: Detect Changed Environments
+    runs-on: ubuntu-latest
+    outputs:
+      dev: ${{ steps.filter.outputs.dev }}
+      staging: ${{ steps.filter.outputs.staging }}
+      production: ${{ steps.filter.outputs.production }}
+      modules: ${{ steps.filter.outputs.modules }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check changed files
+        uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          filters: |
+            dev:
+              - 'iac/environments/dev/**'
+              - 'iac/modules/**'
+              - 'iac/*.tf'
+            staging:
+              - 'iac/environments/staging/**'
+              - 'iac/modules/**'
+              - 'iac/*.tf'
+            production:
+              - 'iac/environments/production/**'
+              - 'iac/modules/**'
+              - 'iac/*.tf'
+            modules:
+              - 'iac/modules/**'
+
+  security-scan:
+    name: Security Scan (Snyk IaC)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Snyk IaC Scan
+        uses: snyk/actions/iac@master
+        continue-on-error: true
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: --severity-threshold=high
+
+  terraform-plan-dev:
+    name: Plan - Dev Environment
+    needs: detect-changes
+    if: needs.detect-changes.outputs.dev == 'true'
+    uses: ./.github/workflows/reusable-terraform.yml
+    with:
+      environment: dev
+      terraform_action: plan
+      working_directory: ./iac/environments/dev
+    secrets:
+      AZURE_CLIENT_ID: ${{ secrets.DEV_AZURE_CLIENT_ID }}
+      AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      AZURE_SUBSCRIPTION_ID: ${{ secrets.DEV_AZURE_SUBSCRIPTION_ID }}
+      AZURE_CLIENT_SECRET: ${{ secrets.DEV_AZURE_CLIENT_SECRET }}
+      TF_VAR_postgresql_admin_password: ${{ secrets.DEV_POSTGRESQL_PASSWORD }}
+
+  terraform-plan-staging:
+    name: Plan - Staging Environment
+    needs: detect-changes
+    if: needs.detect-changes.outputs.staging == 'true'
+    uses: ./.github/workflows/reusable-terraform.yml
+    with:
+      environment: staging
+      terraform_action: plan
+      working_directory: ./iac/environments/staging
+    secrets:
+      AZURE_CLIENT_ID: ${{ secrets.STAGING_AZURE_CLIENT_ID }}
+      AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      AZURE_SUBSCRIPTION_ID: ${{ secrets.STAGING_AZURE_SUBSCRIPTION_ID }}
+      AZURE_CLIENT_SECRET: ${{ secrets.STAGING_AZURE_CLIENT_SECRET }}
+      TF_VAR_postgresql_admin_password: ${{ secrets.STAGING_POSTGRESQL_PASSWORD }}
+
+  terraform-plan-production:
+    name: Plan - Production Environment
+    needs: detect-changes
+    if: needs.detect-changes.outputs.production == 'true'
+    uses: ./.github/workflows/reusable-terraform.yml
+    with:
+      environment: production
+      terraform_action: plan
+      working_directory: ./iac/environments/production
+    secrets:
+      AZURE_CLIENT_ID: ${{ secrets.PROD_AZURE_CLIENT_ID }}
+      AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      AZURE_SUBSCRIPTION_ID: ${{ secrets.PROD_AZURE_SUBSCRIPTION_ID }}
+      AZURE_CLIENT_SECRET: ${{ secrets.PROD_AZURE_CLIENT_SECRET }}
+      TF_VAR_postgresql_admin_password: ${{ secrets.PROD_POSTGRESQL_PASSWORD }}
+
+  comment-pr:
+    name: Comment Plan Results
+    needs: [terraform-plan-dev, terraform-plan-staging, terraform-plan-production]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const output = `#### Terraform Plan Results 🚀
+            
+            | Environment | Status |
+            |-------------|--------|
+            | Dev | ${{ needs.terraform-plan-dev.result }} |
+            | Staging | ${{ needs.terraform-plan-staging.result }} |
+            | Production | ${{ needs.terraform-plan-production.result }} |
+            
+            *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`*`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: output
+            })
+

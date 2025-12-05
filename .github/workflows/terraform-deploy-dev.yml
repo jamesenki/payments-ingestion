@@ -1,0 +1,63 @@
+name: Deploy to Dev Environment
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'iac/environments/dev/**'
+      - 'iac/modules/**'
+      - 'iac/*.tf'
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Terraform action (apply or plan)'
+        required: true
+        default: 'apply'
+        type: choice
+        options:
+          - apply
+          - plan
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  deploy-dev:
+    name: Deploy Infrastructure to Dev
+    uses: ./.github/workflows/reusable-terraform.yml
+    with:
+      environment: dev
+      terraform_action: ${{ github.event.inputs.action || 'apply' }}
+      working_directory: ./iac/environments/dev
+    secrets:
+      AZURE_CLIENT_ID: ${{ secrets.DEV_AZURE_CLIENT_ID }}
+      AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      AZURE_SUBSCRIPTION_ID: ${{ secrets.DEV_AZURE_SUBSCRIPTION_ID }}
+      AZURE_CLIENT_SECRET: ${{ secrets.DEV_AZURE_CLIENT_SECRET }}
+      TF_VAR_postgresql_admin_password: ${{ secrets.DEV_POSTGRESQL_PASSWORD }}
+
+  notify-success:
+    name: Notify Deployment Success
+    needs: deploy-dev
+    if: success()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Success
+        run: |
+          echo "✅ Dev environment deployed successfully!"
+          echo "Deployment completed at $(date)"
+
+  notify-failure:
+    name: Notify Deployment Failure
+    needs: deploy-dev
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Failure
+        run: |
+          echo "❌ Dev environment deployment failed!"
+          echo "Please check the logs for more details."
+          exit 1
+

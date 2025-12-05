@@ -1,0 +1,77 @@
+# Metric Derivation Rules
+# Rules for deriving metrics from normalized transactions
+
+rules:
+  version: "1.0.0"
+  
+  # Rule: High Value Transaction Count
+  - name: "high_value_transaction_count"
+    description: "Count transactions above a threshold amount"
+    enabled: true
+    metric_name: "high_value_count"
+    metric_type: "count"
+    metric_category: "transaction_volume"
+    condition:
+      field: "amount"
+      operator: ">"
+      value: 1000.00
+    rule_version: "1.0.0"
+  
+  # Rule: Failed Transaction Percentage
+  - name: "failed_transaction_percentage"
+    description: "Calculate percentage of failed transactions"
+    enabled: true
+    metric_name: "failed_percentage"
+    metric_type: "percentage"
+    metric_category: "transaction_quality"
+    condition:
+      field: "payment_status"
+      operator: "=="
+      value: "failed"
+    rule_version: "1.0.0"
+  
+  # Rule: Average Transaction Amount by Payment Method
+  - name: "avg_amount_by_method"
+    description: "Calculate average transaction amount by payment method"
+    enabled: true
+    metric_name: "avg_amount_{payment_method}"
+    metric_type: "average"
+    metric_category: "transaction_amount"
+    group_by: "payment_method"
+    field: "amount"
+    rule_version: "1.0.0"
+  
+  # Rule: Transaction Volume by Currency
+  - name: "volume_by_currency"
+    description: "Sum transaction amounts by currency"
+    enabled: true
+    metric_name: "total_volume_{currency}"
+    metric_type: "sum"
+    metric_category: "transaction_volume"
+    group_by: "currency"
+    field: "amount"
+    rule_version: "1.0.0"
+  
+  # Rule: Customer Transaction Count
+  - name: "customer_transaction_count"
+    description: "Count transactions per customer"
+    enabled: true
+    metric_name: "customer_tx_count"
+    metric_type: "count"
+    metric_category: "customer_behavior"
+    group_by: "customer_id"
+    rule_version: "1.0.0"
+  
+  # Rule: Cross-Border Transaction Ratio
+  - name: "cross_border_ratio"
+    description: "Calculate ratio of cross-border transactions"
+    enabled: true
+    metric_name: "cross_border_ratio"
+    metric_type: "ratio"
+    metric_category: "geographic"
+    condition:
+      field: "customer_country"
+      operator: "!="
+      value: "US"  # Assuming merchant is in US
+    rule_version: "1.0.0"
+

@@ -1,0 +1,143 @@
+# Payment Data Simulator Configuration - Example
+# Copy this file to simulator_config.yaml and customize as needed
+
+simulator:
+  output:
+    destination: "event_hub"
+    batch_size: 100
+    rate_limit: 1000
+    connection_string: "${EVENTHUB_CONNECTION_STRING}"
+  
+  transaction:
+    volume:
+      total: 10000
+      rate: 100
+      duration: null
+    
+    variability:
+      amounts:
+        distribution: "normal"
+        mean: 100.00
+        std_dev: 50.00
+        min: 1.00
+        max: 10000.00
+      
+      payment_methods:
+        credit_card: 0.50
+        debit_card: 0.30
+        bank_transfer: 0.10
+        digital_wallet: 0.05
+        cryptocurrency: 0.03
+        cash_equivalent: 0.02
+      
+      payment_status:
+        completed: 0.85
+        failed: 0.10
+        pending: 0.03
+        cancelled: 0.01
+        refunded: 0.01
+      
+      currencies:
+        USD: 0.60
+        EUR: 0.20
+        GBP: 0.10
+        JPY: 0.05
+        CAD: 0.03
+        AUD: 0.02
+      
+      countries:
+        US: 0.50
+        GB: 0.15
+        CA: 0.10
+        AU: 0.08
+        DE: 0.05
+        FR: 0.04
+        JP: 0.03
+        other: 0.05
+      
+      temporal:
+        business_hours: 0.70
+        evening: 0.20
+        night: 0.05
+        weekend: 0.05
+        timezone_distribution:
+          UTC-5: 0.40
+          UTC-8: 0.30
+          UTC+0: 0.20
+          UTC+9: 0.10
+      
+      merchant_categories:
+        retail: 0.30
+        food_beverage: 0.20
+        travel: 0.15
+        entertainment: 0.10
+        healthcare: 0.08
+        education: 0.07
+        other: 0.10
+
+compliance:
+  enabled: true
+  total_violation_percentage: 0.13
+  
+  scenarios:
+    aml_violations:
+      enabled: true
+      percentage: 0.02
+      patterns:
+        structuring:
+          enabled: true
+          frequency: 0.01
+          threshold: 10000.00
+          transaction_count: 5
+          time_window_minutes: 60
+        large_amount:
+          enabled: true
+          frequency: 0.005
+          min_amount: 50000.00
+    
+    kyc_violations:
+      enabled: true
+      percentage: 0.03
+      patterns:
+        missing_customer_id:
+          enabled: true
+          frequency: 0.01
+        invalid_email:
+          enabled: true
+          frequency: 0.01
+    
+    data_quality_violations:
+      enabled: true
+      percentage: 0.05
+      patterns:
+        negative_amount:
+          enabled: true
+          frequency: 0.01
+        invalid_currency:
+          enabled: true
+          frequency: 0.01
+
+metadata:
+  include_ip_address: true
+  include_user_agent: true
+  include_card_data: true
+  include_risk_score: true
+  include_fraud_indicators: true
+  
+  risk_score:
+    distribution: "normal"
+    mean: 0.3
+    std_dev: 0.2
+    min: 0.0
+    max: 1.0
+
+logging:
+  level: "INFO"
+  format: "json"
+  file: "simulator.log"
+  include_metrics: true
+
+metrics:
+  enabled: true
+  publish_interval_seconds: 60
+

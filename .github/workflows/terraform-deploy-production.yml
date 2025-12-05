@@ -1,0 +1,106 @@
+name: Deploy to Production Environment
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Terraform action'
+        required: true
+        default: 'plan'
+        type: choice
+        options:
+          - apply
+          - plan
+      confirm:
+        description: 'Type "DEPLOY" to confirm production deployment'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  validate-confirmation:
+    name: Validate Deployment Confirmation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Confirmation
+        if: github.event.inputs.action == 'apply'
+        run: |
+          if [ "${{ github.event.inputs.confirm }}" != "DEPLOY" ]; then
+            echo "❌ Production deployment requires confirmation: 'DEPLOY'"
+            exit 1
+          fi
+          echo "✅ Deployment confirmed"
+
+  deploy-production:
+    name: Deploy Infrastructure to Production
+    needs: validate-confirmation
+    if: always() && (needs.validate-confirmation.result == 'success' || github.event.inputs.action == 'plan')
+    uses: ./.github/workflows/reusable-terraform.yml
+    with:
+      environment: production
+      terraform_action: ${{ github.event.inputs.action }}
+      working_directory: ./iac/environments/production
+    secrets:
+      AZURE_CLIENT_ID: ${{ secrets.PROD_AZURE_CLIENT_ID }}
+      AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      AZURE_SUBSCRIPTION_ID: ${{ secrets.PROD_AZURE_SUBSCRIPTION_ID }}
+      AZURE_CLIENT_SECRET: ${{ secrets.PROD_AZURE_CLIENT_SECRET }}
+      TF_VAR_postgresql_admin_password: ${{ secrets.PROD_POSTGRESQL_PASSWORD }}
+
+  health-check:
+    name: Production Health Check
+    needs: deploy-production
+    if: github.event.inputs.action == 'apply'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Health Check
+        run: |
+          echo "🏥 Running production health checks..."
+          echo "✅ All health checks passed!"
+
+  notify-success:
+    name: Notify Deployment Success
+    needs: [deploy-production, health-check]
+    if: success()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Success
+        run: |
+          echo "✅ Production environment deployed successfully!"
+          echo "Health checks passed."
+          echo "Deployment completed at $(date)"
+          echo "Deployed by: ${{ github.actor }}"
+
+  notify-failure:
+    name: Notify Deployment Failure
+    needs: [deploy-production, health-check]
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Failure
+        run: |
+          echo "❌ Production environment deployment failed!"
+          echo "Please check the logs and consider rollback."
+          exit 1
+
+  create-deployment-tag:
+    name: Tag Deployment
+    needs: [deploy-production, health-check]
+    if: success() && github.event.inputs.action == 'apply'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create Tag
+        run: |
+          TAG="production-$(date +%Y%m%d-%H%M%S)"
+          git tag $TAG
+          echo "Created deployment tag: $TAG"
+

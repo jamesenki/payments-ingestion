@@ -1,0 +1,80 @@
+name: Destroy Infrastructure (Manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to destroy'
+        required: true
+        type: choice
+        options:
+          - dev
+          - staging
+      confirm:
+        description: 'Type the environment name to confirm destruction'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  validate-confirmation:
+    name: Validate Destruction Confirmation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Confirmation
+        run: |
+          if [ "${{ github.event.inputs.confirm }}" != "${{ github.event.inputs.environment }}" ]; then
+            echo "❌ Destruction requires exact environment name confirmation"
+            exit 1
+          fi
+          echo "✅ Destruction confirmed for ${{ github.event.inputs.environment }}"
+
+  destroy-dev:
+    name: Destroy Dev Infrastructure
+    needs: validate-confirmation
+    if: github.event.inputs.environment == 'dev'
+    uses: ./.github/workflows/reusable-terraform.yml
+    with:
+      environment: dev
+      terraform_action: destroy
+      working_directory: ./iac/environments/dev
+    secrets:
+      AZURE_CLIENT_ID: ${{ secrets.DEV_AZURE_CLIENT_ID }}
+      AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      AZURE_SUBSCRIPTION_ID: ${{ secrets.DEV_AZURE_SUBSCRIPTION_ID }}
+      AZURE_CLIENT_SECRET: ${{ secrets.DEV_AZURE_CLIENT_SECRET }}
+      TF_VAR_postgresql_admin_password: ${{ secrets.DEV_POSTGRESQL_PASSWORD }}
+
+  destroy-staging:
+    name: Destroy Staging Infrastructure
+    needs: validate-confirmation
+    if: github.event.inputs.environment == 'staging'
+    uses: ./.github/workflows/reusable-terraform.yml
+    with:
+      environment: staging
+      terraform_action: destroy
+      working_directory: ./iac/environments/staging
+    secrets:
+      AZURE_CLIENT_ID: ${{ secrets.STAGING_AZURE_CLIENT_ID }}
+      AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      AZURE_SUBSCRIPTION_ID: ${{ secrets.STAGING_AZURE_SUBSCRIPTION_ID }}
+      AZURE_CLIENT_SECRET: ${{ secrets.STAGING_AZURE_CLIENT_SECRET }}
+      TF_VAR_postgresql_admin_password: ${{ secrets.STAGING_POSTGRESQL_PASSWORD }}
+
+  notify-completion:
+    name: Notify Destruction Complete
+    needs: [destroy-dev, destroy-staging]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify
+        run: |
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "✅ Infrastructure destroyed for ${{ github.event.inputs.environment }}"
+          else
+            echo "❌ Destruction failed for ${{ github.event.inputs.environment }}"
+          fi
+

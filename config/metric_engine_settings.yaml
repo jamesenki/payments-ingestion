@@ -1,0 +1,80 @@
+# Metric Engine Configuration
+# Configuration for data extraction, normalization, rule processing, aggregation, and clustering
+
+metric_engine:
+  # Data source configuration
+  data_source:
+    type: "postgresql"  # Options: "postgresql", "event_hub"
+    connection_string: "${DATABASE_URL}"
+    batch_size: 1000
+    max_retries: 3
+    retry_delay_seconds: 5
+  
+  # Time window configurations
+  time_windows:
+    - name: "5min"
+      duration_seconds: 300
+      enabled: true
+    - name: "hourly"
+      duration_seconds: 3600
+      enabled: true
+    - name: "daily"
+      duration_seconds: 86400
+      enabled: true
+    - name: "weekly"
+      duration_seconds: 604800
+      enabled: false
+  
+  # Aggregation configuration
+  aggregation:
+    enabled: true
+    dimensions:
+      - payment_method
+      - currency
+      - payment_status
+      - customer_country
+      - merchant_category
+    operations:
+      - sum
+      - average
+      - count
+      - min
+      - max
+    default_time_window: "5min"
+    store_to_database: true
+  
+  # Clustering configuration
+  clustering:
+    enabled: true
+    algorithm: "kmeans"  # Options: "kmeans", "dbscan", "hierarchical"
+    n_clusters: 5
+    similarity_metric: "euclidean"  # Options: "euclidean", "manhattan", "cosine"
+    features:
+      - amount
+      - payment_method_encoded
+      - currency_encoded
+    time_window: "hourly"
+    min_cluster_size: 10
+    max_cluster_size: 1000
+  
+  # Rule processing configuration
+  rules:
+    enabled: true
+    rules_file: "config/metric_rules.yaml"
+    rule_version: "1.0.0"
+    store_to_database: true
+  
+  # Processing configuration
+  processing:
+    max_workers: 4
+    chunk_size: 1000
+    enable_parallel: true
+    timeout_seconds: 300
+
+# Logging configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "json"
+  file: "metric_engine.log"
+  include_metrics: true
+

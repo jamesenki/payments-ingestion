@@ -1,0 +1,139 @@
+name: Reusable Terraform Workflow
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        description: 'Target environment (dev, staging, production)'
+        required: true
+        type: string
+      terraform_action:
+        description: 'Terraform action (plan, apply, destroy)'
+        required: true
+        type: string
+      working_directory:
+        description: 'Terraform working directory'
+        required: true
+        type: string
+    secrets:
+      AZURE_CLIENT_ID:
+        required: true
+      AZURE_TENANT_ID:
+        required: true
+      AZURE_SUBSCRIPTION_ID:
+        required: true
+      AZURE_CLIENT_SECRET:
+        required: true
+      TF_VAR_postgresql_admin_password:
+        required: true
+
+jobs:
+  terraform:
+    name: Terraform ${{ inputs.terraform_action }} - ${{ inputs.environment }}
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    
+    defaults:
+      run:
+        working-directory: ${{ inputs.working_directory }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.6.0
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: |
+            {
+              "clientId": "${{ secrets.AZURE_CLIENT_ID }}",
+              "clientSecret": "${{ secrets.AZURE_CLIENT_SECRET }}",
+              "subscriptionId": "${{ secrets.AZURE_SUBSCRIPTION_ID }}",
+              "tenantId": "${{ secrets.AZURE_TENANT_ID }}"
+            }
+
+      - name: Terraform Format Check
+        id: fmt
+        run: terraform fmt -check -recursive
+        continue-on-error: true
+
+      - name: Terraform Init
+        id: init
+        run: terraform init
+        env:
+          ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+          ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+
+      - name: Terraform Validate
+        id: validate
+        run: terraform validate -no-color
+
+      - name: Terraform Plan
+        id: plan
+        if: inputs.terraform_action == 'plan' || inputs.terraform_action == 'apply'
+        run: terraform plan -no-color -out=tfplan
+        env:
+          ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+          ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          TF_VAR_postgresql_admin_login: psqladmin
+          TF_VAR_postgresql_admin_password: ${{ secrets.TF_VAR_postgresql_admin_password }}
+        continue-on-error: false
+
+      - name: Upload Plan Artifact
+        if: inputs.terraform_action == 'plan' || inputs.terraform_action == 'apply'
+        uses: actions/upload-artifact@v3
+        with:
+          name: tfplan-${{ inputs.environment }}
+          path: ${{ inputs.working_directory }}/tfplan
+          retention-days: 5
+
+      - name: Terraform Apply
+        id: apply
+        if: inputs.terraform_action == 'apply'
+        run: terraform apply -auto-approve tfplan
+        env:
+          ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+          ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          TF_VAR_postgresql_admin_login: psqladmin
+          TF_VAR_postgresql_admin_password: ${{ secrets.TF_VAR_postgresql_admin_password }}
+
+      - name: Terraform Destroy
+        id: destroy
+        if: inputs.terraform_action == 'destroy'
+        run: terraform destroy -auto-approve
+        env:
+          ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+          ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          TF_VAR_postgresql_admin_login: psqladmin
+          TF_VAR_postgresql_admin_password: ${{ secrets.TF_VAR_postgresql_admin_password }}
+
+      - name: Terraform Output
+        if: inputs.terraform_action == 'apply'
+        id: output
+        run: terraform output -json
+        continue-on-error: true
+
+      - name: Upload State Info
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: terraform-state-info-${{ inputs.environment }}
+          path: |
+            ${{ inputs.working_directory }}/.terraform
+            ${{ inputs.working_directory }}/terraform.tfstate
+          retention-days: 30
+        continue-on-error: true
+
