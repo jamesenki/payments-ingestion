@@ -29,3 +29,6 @@ numpy>=1.24.0
 # Parquet serialization (for Blob Storage)
 pyarrow>=14.0.0
 
+# Kafka consumer support
+kafka-python>=2.0.2
+

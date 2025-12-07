@@ -6,8 +6,12 @@ messages from different broker types (Event Hubs, Kafka).
 """
 
 from .base import MessageConsumer
+from .event_hubs import EventHubsConsumer
+from .kafka import KafkaConsumer as KafkaMessageConsumer
 
 __all__ = [
     'MessageConsumer',
+    'EventHubsConsumer',
+    'KafkaMessageConsumer',
 ]
 
