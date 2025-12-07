@@ -153,3 +153,67 @@ variable "tags" {
   default     = {}
 }
 
+# Lifecycle Management Variables
+variable "enable_lifecycle_management" {
+  description = "Enable lifecycle management policies for raw events"
+  type        = bool
+  default     = true
+}
+
+variable "archive_after_days" {
+  description = "Number of days after which to transition blobs to Archive tier"
+  type        = number
+  default     = 90
+  validation {
+    condition     = var.archive_after_days >= 1 && var.archive_after_days <= 2555
+    error_message = "Archive after days must be between 1 and 2555 (7 years)."
+  }
+}
+
+variable "delete_after_days" {
+  description = "Number of days after which to delete blobs (must be greater than archive_after_days)"
+  type        = number
+  default     = 365
+  validation {
+    condition     = var.delete_after_days >= 1 && var.delete_after_days <= 2555
+    error_message = "Delete after days must be between 1 and 2555 (7 years)."
+  }
+}
+
+# CORS Configuration (optional)
+variable "enable_cors" {
+  description = "Enable CORS for blob storage"
+  type        = bool
+  default     = false
+}
+
+variable "cors_allowed_origins" {
+  description = "List of allowed origins for CORS"
+  type        = list(string)
+  default     = []
+}
+
+variable "cors_allowed_methods" {
+  description = "List of allowed HTTP methods for CORS"
+  type        = list(string)
+  default     = ["GET", "HEAD", "OPTIONS"]
+}
+
+variable "cors_allowed_headers" {
+  description = "List of allowed headers for CORS"
+  type        = list(string)
+  default     = ["*"]
+}
+
+variable "cors_exposed_headers" {
+  description = "List of exposed headers for CORS"
+  type        = list(string)
+  default     = ["*"]
+}
+
+variable "cors_max_age_in_seconds" {
+  description = "Maximum age in seconds for CORS preflight requests"
+  type        = number
+  default     = 3600
+}
+

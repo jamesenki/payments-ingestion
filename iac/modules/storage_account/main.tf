@@ -23,6 +23,18 @@ resource "azurerm_storage_account" "this" {
     container_delete_retention_policy {
       days = var.container_delete_retention_days
     }
+    
+    # CORS configuration (optional)
+    dynamic "cors_rule" {
+      for_each = var.enable_cors ? [1] : []
+      content {
+        allowed_origins    = var.cors_allowed_origins
+        allowed_methods    = var.cors_allowed_methods
+        allowed_headers    = var.cors_allowed_headers
+        exposed_headers    = var.cors_exposed_headers
+        max_age_in_seconds = var.cors_max_age_in_seconds
+      }
+    }
   }
 
   identity {
@@ -64,5 +76,36 @@ resource "azurerm_storage_account_network_rules" "this" {
   bypass                     = var.network_bypass
   ip_rules                   = var.ip_rules
   virtual_network_subnet_ids = var.virtual_network_subnet_ids
+}
+
+# Lifecycle Management Policy for Raw Events
+# This policy automatically transitions blobs to Archive tier after 90 days
+# and deletes them after the retention period (365 days by default)
+resource "azurerm_storage_management_policy" "raw_events_lifecycle" {
+  count = var.enable_lifecycle_management ? 1 : 0
+
+  storage_account_id = azurerm_storage_account.this.id
+
+  rule {
+    name    = "raw-events-lifecycle"
+    enabled = true
+
+    filters {
+      prefix_match = ["raw_events/"]
+      blob_types   = ["blockBlob"]
+    }
+
+    actions {
+      # Transition to Archive tier after specified days
+      base_blob {
+        tier_to_archive_after_days_since_modification_greater_than = var.archive_after_days
+      }
+
+      # Delete after retention period
+      base_blob {
+        delete_after_days_since_modification_greater_than = var.delete_after_days
+      }
+    }
+  }
 }
 

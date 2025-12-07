@@ -17,7 +17,7 @@ eventhub_consumer_groups         = ["default", "payments-processor", "analytics"
 # Storage Account Configuration
 storage_account_tier     = "Standard"
 storage_replication_type = "LRS"
-storage_container_names  = ["payments-data", "processed-payments", "archives"]
+storage_container_names  = ["raw-events", "payments-data", "processed-payments", "archives"]
 storage_queue_names      = ["payment-processing-queue", "error-queue"]
 storage_table_names      = []
 

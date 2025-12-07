@@ -73,3 +73,8 @@ output "table_ids" {
   }
 }
 
+output "lifecycle_management_policy_id" {
+  description = "The ID of the lifecycle management policy for raw events (if enabled)"
+  value       = var.enable_lifecycle_management ? azurerm_storage_management_policy.raw_events_lifecycle[0].id : null
+}
+
