@@ -97,9 +97,10 @@ echo "Applying database schemas..."
 echo ""
 
 SCHEMA_FILES=(
-    "$SCHEMA_DIR/01_normalized_transactions.sql"
+    # Note: 01_normalized_transactions.sql is deprecated (raw events now in Blob Storage)
     "$SCHEMA_DIR/02_dynamic_metrics.sql"
     "$SCHEMA_DIR/03_payment_metrics_5m.sql"
+    "$SCHEMA_DIR/05_aggregate_histograms.sql"
 )
 
 FAILED=false
