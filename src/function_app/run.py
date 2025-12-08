@@ -50,6 +50,7 @@ from .storage.raw_event import RawEvent
 from .connections.hybrid_storage import HybridStorageConnectionManager
 from .messaging import Message
 from .metrics.metric_engine_adapter import MetricEngineAdapter
+from .config.key_vault_client import get_connection_string_from_key_vault
 
 # Conditional import for BlobRawEventStore (requires Azure SDK)
 try:
@@ -73,19 +74,24 @@ def _get_connection_manager() -> HybridStorageConnectionManager:
     global _connection_manager
     
     if _connection_manager is None:
-        postgres_conn_str = os.getenv(
-            "POSTGRES_CONNECTION_STRING",
+        # Try Key Vault first, then fall back to environment variables
+        postgres_conn_str = (
+            get_connection_string_from_key_vault("PostgresConnectionString") or
+            get_connection_string_from_key_vault("POSTGRES_CONNECTION_STRING") or
+            os.getenv("POSTGRES_CONNECTION_STRING") or
             os.getenv("AzureWebJobsStorage")  # Fallback for local testing
         )
-        blob_conn_str = os.getenv(
-            "BLOB_STORAGE_CONNECTION_STRING",
+        blob_conn_str = (
+            get_connection_string_from_key_vault("BlobStorageConnectionString") or
+            get_connection_string_from_key_vault("BLOB_STORAGE_CONNECTION_STRING") or
+            os.getenv("BLOB_STORAGE_CONNECTION_STRING") or
             os.getenv("AzureWebJobsStorage")  # Fallback for local testing
         )
         
         if not postgres_conn_str or not blob_conn_str:
             raise ValueError(
                 "POSTGRES_CONNECTION_STRING and BLOB_STORAGE_CONNECTION_STRING "
-                "must be set"
+                "must be set (via Key Vault or environment variables)"
             )
         
         _connection_manager = HybridStorageConnectionManager(
@@ -111,8 +117,11 @@ def _get_blob_store():
     
     if _blob_store is None:
         conn_manager = _get_connection_manager()
-        blob_conn_str = os.getenv(
-            "BLOB_STORAGE_CONNECTION_STRING",
+        # Try Key Vault first, then fall back to environment variables
+        blob_conn_str = (
+            get_connection_string_from_key_vault("BlobStorageConnectionString") or
+            get_connection_string_from_key_vault("BLOB_STORAGE_CONNECTION_STRING") or
+            os.getenv("BLOB_STORAGE_CONNECTION_STRING") or
             os.getenv("AzureWebJobsStorage")
         )
         container_name = os.getenv("BLOB_CONTAINER_NAME", "raw-events")

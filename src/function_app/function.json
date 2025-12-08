@@ -10,6 +10,12 @@
       "cardinality": "many",
       "consumerGroup": "$Default"
     }
-  ]
+  ],
+  "retry": {
+    "strategy": "exponentialBackoff",
+    "maxRetryCount": 3,
+    "minimumInterval": "00:00:05",
+    "maximumInterval": "00:05:00"
+  },
+  "configurationSource": "attributes"
 }
-
