@@ -49,6 +49,7 @@ from .parsing.models import ParsedTransaction, ParseResult
 from .storage.raw_event import RawEvent
 from .connections.hybrid_storage import HybridStorageConnectionManager
 from .messaging import Message
+from .metrics.metric_engine_adapter import MetricEngineAdapter
 
 # Conditional import for BlobRawEventStore (requires Azure SDK)
 try:
@@ -64,6 +65,7 @@ logger = logging.getLogger(__name__)
 _connection_manager: Optional[HybridStorageConnectionManager] = None
 _blob_store: Optional[BlobRawEventStore] = None
 _parser: Optional[DataParser] = None
+_metric_engine_adapter: Optional[MetricEngineAdapter] = None
 
 
 def _get_connection_manager() -> HybridStorageConnectionManager:
@@ -494,11 +496,28 @@ def _route_to_dead_letter_queue(
         return False
 
 
+def _get_metric_engine_adapter() -> MetricEngineAdapter:
+    """Get or initialize the MetricEngine adapter."""
+    global _metric_engine_adapter
+    
+    if _metric_engine_adapter is None:
+        rules_file = os.getenv("METRIC_RULES_FILE", "config/metric_rules.yaml")
+        rule_version = os.getenv("METRIC_RULE_VERSION", "1.0.0")
+        _metric_engine_adapter = MetricEngineAdapter(
+            rules_file=rules_file,
+            rule_version=rule_version
+        )
+        logger.info("MetricEngineAdapter initialized")
+    
+    return _metric_engine_adapter
+
+
 def _extract_metrics(transaction: ParsedTransaction) -> List[Dict[str, Any]]:
     """
-    Extract metrics from parsed transaction.
+    Extract metrics from parsed transaction using MetricEngine.
     
-    This is a simplified version. In production, this would use the MetricEngine.
+    This uses the full MetricEngine with rule-based derivation.
+    Falls back to basic metrics if MetricEngine fails.
     
     Args:
         transaction: Parsed transaction
@@ -506,39 +525,42 @@ def _extract_metrics(transaction: ParsedTransaction) -> List[Dict[str, Any]]:
     Returns:
         List of metric dictionaries
     """
-    metrics = []
-    
-    # Basic transaction metrics
-    metrics.append({
-        "metric_type": "transaction_amount",
-        "metric_value": transaction.amount,
-        "metric_data": {
-            "currency": transaction.currency,
-            "status": str(transaction.status.value)
-        }
-    })
-    
-    # Channel metrics
-    metrics.append({
-        "metric_type": "channel_usage",
-        "metric_value": 1,
-        "metric_data": {
-            "channel": transaction.channel,
-            "transaction_type": transaction.transaction_type
-        }
-    })
-    
-    # Status metrics
-    metrics.append({
-        "metric_type": "transaction_status",
-        "metric_value": 1,
-        "metric_data": {
-            "status": str(transaction.status.value),
-            "transaction_type": transaction.transaction_type
-        }
-    })
-    
-    return metrics
+    try:
+        adapter = _get_metric_engine_adapter()
+        return adapter.extract_metrics(transaction)
+    except Exception as e:
+        logger.warning(
+            f"Failed to extract metrics with MetricEngine: {e}, "
+            "using fallback metrics",
+            exc_info=True
+        )
+        # Fallback to basic metrics
+        return [
+            {
+                "metric_type": "transaction_amount",
+                "metric_value": float(transaction.amount),
+                "metric_data": {
+                    "currency": transaction.currency,
+                    "status": str(transaction.status.value)
+                }
+            },
+            {
+                "metric_type": "channel_usage",
+                "metric_value": 1,
+                "metric_data": {
+                    "channel": transaction.channel,
+                    "transaction_type": transaction.transaction_type
+                }
+            },
+            {
+                "metric_type": "transaction_status",
+                "metric_value": 1,
+                "metric_data": {
+                    "status": str(transaction.status.value),
+                    "transaction_type": transaction.transaction_type
+                }
+            }
+        ]
 
 
 @func.EventHubMessageTrigger(
