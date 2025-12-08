@@ -98,8 +98,10 @@ echo ""
 
 SCHEMA_FILES=(
     # Note: 01_normalized_transactions.sql is deprecated (raw events now in Blob Storage)
-    "$SCHEMA_DIR/02_dynamic_metrics.sql"
+    # Using updated schema that matches WO-11 implementation
+    "$SCHEMA_DIR/02_dynamic_metrics_updated.sql"
     "$SCHEMA_DIR/03_payment_metrics_5m.sql"
+    "$SCHEMA_DIR/04_failed_items.sql"
     "$SCHEMA_DIR/05_aggregate_histograms.sql"
 )
 

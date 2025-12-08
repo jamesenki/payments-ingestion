@@ -18,6 +18,9 @@ try:
     AZURE_STORAGE_AVAILABLE = True
 except ImportError:
     AZURE_STORAGE_AVAILABLE = False
+    # Create a dummy class for type hints when Azure SDK is not available
+    class BlobServiceClient:
+        pass
 
 from .database_pool import DatabaseConnectionPool
 from ..storage.parquet_serializer import ParquetSerializer

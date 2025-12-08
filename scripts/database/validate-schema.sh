@@ -73,15 +73,19 @@ get_row_count() {
 echo "Validating Required Tables:"
 echo "============================"
 # Note: normalizedtransactions is deprecated (raw events now in Blob Storage)
-check_table "dynamicmetrics"
+check_table "dynamic_metrics"
 check_table "payment_metrics_5m"
+check_table "failed_items"
 check_table "aggregate_histograms"
 echo ""
 
 echo "Validating Indexes:"
 echo "==================="
-check_index "idx_dynamic_metrics_transaction"
+check_index "idx_dynamic_metrics_transaction_id"
+check_index "idx_dynamic_metrics_correlation_id"
 check_index "idx_payment_metrics_5m_window"
+check_index "idx_failed_items_transaction_id"
+check_index "idx_failed_items_unresolved"
 check_index "idx_aggregate_histograms_time_window"
 echo ""
 
@@ -114,8 +118,9 @@ echo ""
 echo "Table Statistics:"
 echo "================="
 # Note: NormalizedTransactions deprecated (raw events now in Blob Storage)
-echo "DynamicMetrics: $(get_row_count dynamicmetrics) rows"
+echo "dynamic_metrics: $(get_row_count dynamic_metrics) rows"
 echo "payment_metrics_5m: $(get_row_count payment_metrics_5m) rows"
+echo "failed_items: $(get_row_count failed_items) rows"
 echo "aggregate_histograms: $(get_row_count aggregate_histograms) rows"
 echo ""
 
