@@ -23,6 +23,12 @@ try:
     from azure.identity.aio import DefaultAzureCredential
     AZURE_EVENTHUB_AVAILABLE = True
 except ImportError:
+    # Create a dummy class for type hints when Azure SDK is not available
+    class EventData:
+        pass
+    EventHubConsumerClient = None
+    EventHubError = Exception
+    DefaultAzureCredential = None
     AZURE_EVENTHUB_AVAILABLE = False
 
 from .base import MessageConsumer

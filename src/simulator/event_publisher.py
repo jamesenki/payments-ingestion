@@ -52,12 +52,32 @@ def create_publisher(config: Dict[str, Any]) -> BasePublisher:
         return EventHubPublisher(publisher_config)
     
     elif destination == "file":
-        # File publisher (to be implemented if needed)
-        raise NotImplementedError("File publisher not yet implemented")
+        # File publisher
+        file_path = config.get("file_path", "transactions.jsonl")
+        if not file_path:
+            raise ValueError("file_path is required for file destination")
+        
+        publisher_config = {
+            "file_path": file_path,
+            "format": config.get("format", "jsonl"),  # jsonl or json_array
+            "append": config.get("append", False),
+            "batch_size": config.get("batch_size", 100),
+        }
+        
+        from .publishers.file import FilePublisher
+        return FilePublisher(publisher_config)
     
     elif destination == "stdout":
-        # Stdout publisher (to be implemented if needed)
-        raise NotImplementedError("Stdout publisher not yet implemented")
+        # Stdout publisher - use file publisher with stdout
+        publisher_config = {
+            "file_path": "/dev/stdout" if os.name != "nt" else "CON",
+            "format": "jsonl",
+            "append": False,
+            "batch_size": config.get("batch_size", 100),
+        }
+        
+        from .publishers.file import FilePublisher
+        return FilePublisher(publisher_config)
     
     else:
         raise ValueError(f"Unknown destination: {destination}")

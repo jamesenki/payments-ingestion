@@ -24,8 +24,8 @@ PARQUET_SCHEMA = pa.schema([
     
     # Temporal Information
     pa.field('transaction_timestamp', pa.timestamp('ns', tz='UTC')),
-    pa.field('ingestion_timestamp', pa.timestamp('ns', tz='UTC', nullable=True)),
-    pa.field('processing_timestamp', pa.timestamp('ns', tz='UTC', nullable=True)),
+    pa.field('ingestion_timestamp', pa.timestamp('ns', tz='UTC'), nullable=True),
+    pa.field('processing_timestamp', pa.timestamp('ns', tz='UTC'), nullable=True),
     
     # Transaction Details
     pa.field('amount', pa.decimal128(19, 4)),
@@ -53,7 +53,7 @@ PARQUET_SCHEMA = pa.schema([
     
     # Audit Fields
     pa.field('created_at', pa.timestamp('ns', tz='UTC')),
-    pa.field('updated_at', pa.timestamp('ns', tz='UTC', nullable=True)),
+    pa.field('updated_at', pa.timestamp('ns', tz='UTC'), nullable=True),
 ])
 
 

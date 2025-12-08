@@ -1662,3 +1662,739 @@
 {"timestamp": "2025-12-05T14:47:02.603939", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
 {"timestamp": "2025-12-05T14:47:02.604087", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
 {"timestamp": "2025-12-05T14:47:04.228221", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:33:14.978601", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:14.980305", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:15.063910", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:15.065287", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:15.081870", "level": "INFO", "logger": "simulator", "message": "Progress: 1000 generated, 1000 published, 0 violations", "module": "main", "function": "_generate_and_publish_batch", "line": 169}
+{"timestamp": "2025-12-07T19:33:15.112313", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:15.120632", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:15.140063", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:15.141716", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:15.163554", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:15.165403", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:15.212189", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:15.214476", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:15.334541", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:15.335885", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:15.499272", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:15.501152", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:15.512600", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:15.513851", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:15.597904", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:15.599134", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:32.798465", "level": "INFO", "logger": "simulator", "message": "Progress: 1000 generated, 10000 published, 0 violations", "module": "main", "function": "_generate_and_publish_batch", "line": 169}
+{"timestamp": "2025-12-07T19:33:32.839294", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:32.840534", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:32.849374", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:32.851135", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:32.860250", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:32.861560", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:32.947978", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:32.949201", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:33.080517", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:33.081732", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:33.081955", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:33:34.674955", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:33:34.704317", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:34.705637", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:34.714601", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:34.715819", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:34.715940", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:33:34.975971", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:33:34.990252", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:34.992308", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:34.992435", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:33:34.993103", "level": "INFO", "logger": "simulator", "message": "Simulation complete. Generated: 0, Published: 0, Violations: 0, Elapsed: 0.00s", "module": "main", "function": "shutdown", "line": 191}
+{"timestamp": "2025-12-07T19:33:34.993284", "level": "INFO", "logger": "simulator", "message": "Publisher metrics: {'total_published': 10}", "module": "main", "function": "shutdown", "line": 202}
+{"timestamp": "2025-12-07T19:33:35.007587", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:35.009288", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:35.009462", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:33:35.322207", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:33:35.338082", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:35.340212", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:35.434780", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:35.436124", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:35.596613", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:35.598040", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:35.598121", "level": "INFO", "logger": "simulator", "message": "Received signal None, shutting down...", "module": "main", "function": "_handle_shutdown", "line": 177}
+{"timestamp": "2025-12-07T19:33:35.612055", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:35.613310", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:35.613390", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:33:35.613799", "level": "INFO", "logger": "simulator", "message": "Simulation complete. Generated: 0, Published: 0, Violations: 0, Elapsed: 0.00s", "module": "main", "function": "shutdown", "line": 191}
+{"timestamp": "2025-12-07T19:33:35.613909", "level": "INFO", "logger": "simulator", "message": "Publisher metrics: {'total_published': 10}", "module": "main", "function": "shutdown", "line": 202}
+{"timestamp": "2025-12-07T19:33:35.626861", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:35.628162", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:35.628337", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:33:37.402623", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:33:37.412549", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:37.413881", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:37.413995", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:33:37.568722", "level": "ERROR", "logger": "simulator", "message": "Error during simulation: Test error", "module": "main", "function": "run", "line": 124, "exception": "Traceback (most recent call last):\n  File \"/Users/lisasimon/payments-ingestion/src/simulator/main.py\", line 119, in run\n    await self._generate_and_publish_batch(batch_count)\n  File \"/Users/lisasimon/payments-ingestion/src/simulator/main.py\", line 161, in _generate_and_publish_batch\n    published_count = await self.publisher.publish_batch(transaction_dicts)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/lisasimon/.pyenv/versions/3.12.7/lib/python3.12/unittest/mock.py\", line 2282, in _execute_mock_call\n    raise effect\nException: Test error"}
+{"timestamp": "2025-12-07T19:33:37.569410", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:33:37.578628", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:37.579974", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:37.665034", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:37.666458", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:37.676165", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:33:37.677542", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:33:37.677673", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:33:39.189565", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:34:04.962201", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:04.963738", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:05.048274", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:05.050146", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:05.065611", "level": "INFO", "logger": "simulator", "message": "Progress: 1000 generated, 1000 published, 0 violations", "module": "main", "function": "_generate_and_publish_batch", "line": 169}
+{"timestamp": "2025-12-07T19:34:05.074593", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:05.076043", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:05.084989", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:05.086326", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:05.118188", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:05.121667", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:05.202716", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:05.204251", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:05.372170", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:05.373543", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:05.559510", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:05.561044", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:05.572736", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:05.574022", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:05.657428", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:05.658810", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:21.419882", "level": "INFO", "logger": "simulator", "message": "Progress: 1000 generated, 10000 published, 0 violations", "module": "main", "function": "_generate_and_publish_batch", "line": 169}
+{"timestamp": "2025-12-07T19:34:21.462060", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:21.463304", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:21.472117", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:21.473359", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:21.482902", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:21.484477", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:21.569633", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:21.570909", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:21.654742", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:21.655968", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:21.656180", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:34:23.263016", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:34:23.290150", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:23.291578", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:23.301146", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:23.302435", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:23.302556", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:34:23.561801", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:34:23.576359", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:23.578381", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:23.578508", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:34:23.579245", "level": "INFO", "logger": "simulator", "message": "Simulation complete. Generated: 0, Published: 0, Violations: 0, Elapsed: 0.00s", "module": "main", "function": "shutdown", "line": 191}
+{"timestamp": "2025-12-07T19:34:23.579429", "level": "INFO", "logger": "simulator", "message": "Publisher metrics: {'total_published': 10}", "module": "main", "function": "shutdown", "line": 202}
+{"timestamp": "2025-12-07T19:34:23.595264", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:23.596916", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:23.597064", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:34:23.856305", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:34:23.871378", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:23.873491", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:23.996380", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:23.997741", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:24.157751", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:24.159210", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:24.159289", "level": "INFO", "logger": "simulator", "message": "Received signal None, shutting down...", "module": "main", "function": "_handle_shutdown", "line": 177}
+{"timestamp": "2025-12-07T19:34:24.172761", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:24.173997", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:24.174152", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:34:24.176184", "level": "INFO", "logger": "simulator", "message": "Simulation complete. Generated: 0, Published: 0, Violations: 0, Elapsed: 0.00s", "module": "main", "function": "shutdown", "line": 191}
+{"timestamp": "2025-12-07T19:34:24.176308", "level": "INFO", "logger": "simulator", "message": "Publisher metrics: {'total_published': 10}", "module": "main", "function": "shutdown", "line": 202}
+{"timestamp": "2025-12-07T19:34:24.187143", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:24.188414", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:24.188741", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:34:25.700214", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:34:25.711046", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:25.712488", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:25.712758", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:34:25.864458", "level": "ERROR", "logger": "simulator", "message": "Error during simulation: Test error", "module": "main", "function": "run", "line": 124, "exception": "Traceback (most recent call last):\n  File \"/Users/lisasimon/payments-ingestion/src/simulator/main.py\", line 119, in run\n    await self._generate_and_publish_batch(batch_count)\n  File \"/Users/lisasimon/payments-ingestion/src/simulator/main.py\", line 161, in _generate_and_publish_batch\n    published_count = await self.publisher.publish_batch(transaction_dicts)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/lisasimon/.pyenv/versions/3.12.7/lib/python3.12/unittest/mock.py\", line 2282, in _execute_mock_call\n    raise effect\nException: Test error"}
+{"timestamp": "2025-12-07T19:34:25.864965", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:34:25.873534", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:25.874793", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:25.989390", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:25.990837", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:26.001397", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:34:26.002664", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:34:26.002777", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:34:27.542600", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:36:35.013362", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:35.015365", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:35.102366", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:35.103700", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:35.119857", "level": "INFO", "logger": "simulator", "message": "Progress: 1000 generated, 1000 published, 0 violations", "module": "main", "function": "_generate_and_publish_batch", "line": 169}
+{"timestamp": "2025-12-07T19:36:35.129225", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:35.130602", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:35.144868", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:35.148592", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:35.211562", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:35.214212", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:35.274214", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:35.277608", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:35.423061", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:35.424435", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:35.590630", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:35.592236", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:35.604220", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:35.605497", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:35.693514", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:35.694785", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:52.967120", "level": "INFO", "logger": "simulator", "message": "Progress: 1000 generated, 10000 published, 0 violations", "module": "main", "function": "_generate_and_publish_batch", "line": 169}
+{"timestamp": "2025-12-07T19:36:53.006754", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:53.007974", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:53.016771", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:53.018018", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:53.026153", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:53.027377", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:53.113247", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:53.114900", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:53.210560", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:53.211990", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:53.212242", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:36:54.726988", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:36:54.754336", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:54.755639", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:54.763993", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:54.765884", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:54.766079", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:36:55.084145", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:36:55.098081", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:55.100441", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:55.100588", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:36:55.101300", "level": "INFO", "logger": "simulator", "message": "Simulation complete. Generated: 0, Published: 0, Violations: 0, Elapsed: 0.00s", "module": "main", "function": "shutdown", "line": 191}
+{"timestamp": "2025-12-07T19:36:55.101486", "level": "INFO", "logger": "simulator", "message": "Publisher metrics: {'total_published': 10}", "module": "main", "function": "shutdown", "line": 202}
+{"timestamp": "2025-12-07T19:36:55.116508", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:55.119235", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:55.119384", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:36:55.403100", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:36:55.418609", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:55.420605", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:55.512895", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:55.514902", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:55.673881", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:55.675568", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:55.675666", "level": "INFO", "logger": "simulator", "message": "Received signal None, shutting down...", "module": "main", "function": "_handle_shutdown", "line": 177}
+{"timestamp": "2025-12-07T19:36:55.689474", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:55.690726", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:55.690803", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:36:55.691199", "level": "INFO", "logger": "simulator", "message": "Simulation complete. Generated: 0, Published: 0, Violations: 0, Elapsed: 0.00s", "module": "main", "function": "shutdown", "line": 191}
+{"timestamp": "2025-12-07T19:36:55.691308", "level": "INFO", "logger": "simulator", "message": "Publisher metrics: {'total_published': 10}", "module": "main", "function": "shutdown", "line": 202}
+{"timestamp": "2025-12-07T19:36:55.705071", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:55.706329", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:55.706546", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:36:57.911611", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:36:57.927209", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:57.928747", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:57.928909", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:36:58.083484", "level": "ERROR", "logger": "simulator", "message": "Error during simulation: Test error", "module": "main", "function": "run", "line": 124, "exception": "Traceback (most recent call last):\n  File \"/Users/lisasimon/payments-ingestion/src/simulator/main.py\", line 119, in run\n    await self._generate_and_publish_batch(batch_count)\n  File \"/Users/lisasimon/payments-ingestion/src/simulator/main.py\", line 161, in _generate_and_publish_batch\n    published_count = await self.publisher.publish_batch(transaction_dicts)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/lisasimon/.pyenv/versions/3.12.7/lib/python3.12/unittest/mock.py\", line 2282, in _execute_mock_call\n    raise effect\nException: Test error"}
+{"timestamp": "2025-12-07T19:36:58.083963", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:36:58.094232", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:58.095632", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:58.180042", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:58.181894", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:58.191009", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:36:58.192225", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:36:58.192328", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:36:59.894414", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:40:31.674569", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:31.676166", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:31.682808", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:31.684043", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:31.701664", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:31.702990", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:31.871212", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:31.872516", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:32.103954", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:32.105244", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:32.192272", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:32.193707", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:40.454721", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:40.456478", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:40.542410", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:40.543845", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:40.560443", "level": "INFO", "logger": "simulator", "message": "Progress: 1000 generated, 1000 published, 0 violations", "module": "main", "function": "_generate_and_publish_batch", "line": 169}
+{"timestamp": "2025-12-07T19:40:40.570265", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:40.571667", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:40.580832", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:40.582166", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:40.593661", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:40.595115", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:40.616670", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:40.617907", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:40.711109", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:40.712927", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:40.924349", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:40.925899", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:40.937703", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:40.938985", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:41.026624", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:41.028997", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:58.367887", "level": "INFO", "logger": "simulator", "message": "Progress: 1000 generated, 10000 published, 0 violations", "module": "main", "function": "_generate_and_publish_batch", "line": 169}
+{"timestamp": "2025-12-07T19:40:58.520823", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:58.522075", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:58.529901", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:58.531224", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:58.539313", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:58.540720", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:58.624808", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:58.626364", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:58.712843", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:40:58.714329", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:40:58.714565", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:41:00.224682", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:41:00.252289", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:00.253582", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:00.263414", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:00.264676", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:00.264811", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:41:00.521740", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:41:00.536520", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:00.538706", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:00.538851", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:41:00.539660", "level": "INFO", "logger": "simulator", "message": "Simulation complete. Generated: 0, Published: 0, Violations: 0, Elapsed: 0.00s", "module": "main", "function": "shutdown", "line": 191}
+{"timestamp": "2025-12-07T19:41:00.539879", "level": "INFO", "logger": "simulator", "message": "Publisher metrics: {'total_published': 10}", "module": "main", "function": "shutdown", "line": 202}
+{"timestamp": "2025-12-07T19:41:00.559788", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:00.563256", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:00.563535", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:41:00.861348", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:41:00.876512", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:00.879108", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:00.969815", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:00.971043", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:01.130352", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:01.132510", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:01.132597", "level": "INFO", "logger": "simulator", "message": "Received signal None, shutting down...", "module": "main", "function": "_handle_shutdown", "line": 177}
+{"timestamp": "2025-12-07T19:41:01.146196", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:01.147600", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:01.147677", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:41:01.148110", "level": "INFO", "logger": "simulator", "message": "Simulation complete. Generated: 0, Published: 0, Violations: 0, Elapsed: 0.00s", "module": "main", "function": "shutdown", "line": 191}
+{"timestamp": "2025-12-07T19:41:01.148248", "level": "INFO", "logger": "simulator", "message": "Publisher metrics: {'total_published': 10}", "module": "main", "function": "shutdown", "line": 202}
+{"timestamp": "2025-12-07T19:41:01.160219", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:01.162130", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:01.162827", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:41:02.720488", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:41:02.731226", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:02.732577", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:02.732840", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:41:02.907204", "level": "ERROR", "logger": "simulator", "message": "Error during simulation: Test error", "module": "main", "function": "run", "line": 124, "exception": "Traceback (most recent call last):\n  File \"/Users/lisasimon/payments-ingestion/src/simulator/main.py\", line 119, in run\n    await self._generate_and_publish_batch(batch_count)\n  File \"/Users/lisasimon/payments-ingestion/src/simulator/main.py\", line 161, in _generate_and_publish_batch\n    published_count = await self.publisher.publish_batch(transaction_dicts)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/lisasimon/.pyenv/versions/3.12.7/lib/python3.12/unittest/mock.py\", line 2282, in _execute_mock_call\n    raise effect\nException: Test error"}
+{"timestamp": "2025-12-07T19:41:02.908451", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:41:02.927029", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:02.929490", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:03.533076", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:03.534528", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:03.621041", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:03.634063", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:03.634346", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:41:05.381444", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:41:05.390290", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:05.391651", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:05.399668", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:05.400886", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:05.410955", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:05.412909", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:05.563903", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:05.565271", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:05.726197", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:05.727430", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:05.813021", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:05.814340", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:17.500081", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:17.501026", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:20.979985", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:20.980868", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:28.501306", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:28.502736", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:28.586169", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:28.587473", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:28.602689", "level": "INFO", "logger": "simulator", "message": "Progress: 1000 generated, 1000 published, 0 violations", "module": "main", "function": "_generate_and_publish_batch", "line": 169}
+{"timestamp": "2025-12-07T19:41:28.611854", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:28.613337", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:28.621049", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:28.622315", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:28.634716", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:28.635932", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:28.658378", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:28.659675", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:28.760373", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:28.762182", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:28.918435", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:28.919775", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:28.932047", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:28.933267", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:29.017007", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:29.018243", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:44.766792", "level": "INFO", "logger": "simulator", "message": "Progress: 1000 generated, 10000 published, 0 violations", "module": "main", "function": "_generate_and_publish_batch", "line": 169}
+{"timestamp": "2025-12-07T19:41:44.849872", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:44.851098", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:44.859017", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:44.860284", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:44.867820", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:44.869075", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:44.952969", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:44.954211", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:45.037550", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:45.038800", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:45.039016", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:41:46.650877", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:41:46.680390", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:46.681741", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:46.690555", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:46.691815", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:46.691942", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:41:46.944019", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:41:46.958778", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:46.961228", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:46.961468", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:41:46.962321", "level": "INFO", "logger": "simulator", "message": "Simulation complete. Generated: 0, Published: 0, Violations: 0, Elapsed: 0.00s", "module": "main", "function": "shutdown", "line": 191}
+{"timestamp": "2025-12-07T19:41:46.962534", "level": "INFO", "logger": "simulator", "message": "Publisher metrics: {'total_published': 10}", "module": "main", "function": "shutdown", "line": 202}
+{"timestamp": "2025-12-07T19:41:46.976578", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:46.978839", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:46.979052", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:41:47.235589", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:41:47.250831", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:47.252815", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:47.347684", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:47.348993", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:47.507344", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:47.509714", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:47.509803", "level": "INFO", "logger": "simulator", "message": "Received signal None, shutting down...", "module": "main", "function": "_handle_shutdown", "line": 177}
+{"timestamp": "2025-12-07T19:41:47.523405", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:47.524781", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:47.524872", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:41:47.525316", "level": "INFO", "logger": "simulator", "message": "Simulation complete. Generated: 0, Published: 0, Violations: 0, Elapsed: 0.00s", "module": "main", "function": "shutdown", "line": 191}
+{"timestamp": "2025-12-07T19:41:47.525424", "level": "INFO", "logger": "simulator", "message": "Publisher metrics: {'total_published': 10}", "module": "main", "function": "shutdown", "line": 202}
+{"timestamp": "2025-12-07T19:41:47.538380", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:47.539819", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:47.540129", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:41:49.115121", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:41:49.125001", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:49.126366", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:49.126865", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:41:49.281667", "level": "ERROR", "logger": "simulator", "message": "Error during simulation: Test error", "module": "main", "function": "run", "line": 124, "exception": "Traceback (most recent call last):\n  File \"/Users/lisasimon/payments-ingestion/src/simulator/main.py\", line 119, in run\n    await self._generate_and_publish_batch(batch_count)\n  File \"/Users/lisasimon/payments-ingestion/src/simulator/main.py\", line 161, in _generate_and_publish_batch\n    published_count = await self.publisher.publish_batch(transaction_dicts)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/lisasimon/.pyenv/versions/3.12.7/lib/python3.12/unittest/mock.py\", line 2282, in _execute_mock_call\n    raise effect\nException: Test error"}
+{"timestamp": "2025-12-07T19:41:49.282168", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:41:49.289895", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:49.291231", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:49.376272", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:49.378102", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:49.388126", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:49.389528", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:49.389675", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:41:50.936445", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:41:50.945232", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:50.946573", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:50.953184", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:50.954364", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:50.965293", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:50.966618", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:51.094997", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:51.096513", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:51.259347", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:51.261029", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:41:51.346399", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:41:51.347635", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:18.219106", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:18.220056", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:18.223381", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:18.224209", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:18.247490", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:18.248401", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:18.325834", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:18.326614", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:18.402776", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:18.403509", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:18.480852", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:18.481711", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:47.632124", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:47.633175", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:47.636656", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:47.637498", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:47.646121", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:47.647031", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:47.708814", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:47.710203", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:47.849142", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:47.850591", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:47.905742", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:47.906728", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:55.440931", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:55.442619", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:55.547272", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:55.548636", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:55.564290", "level": "INFO", "logger": "simulator", "message": "Progress: 1000 generated, 1000 published, 0 violations", "module": "main", "function": "_generate_and_publish_batch", "line": 169}
+{"timestamp": "2025-12-07T19:42:55.572078", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:55.573548", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:55.582299", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:55.583587", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:55.597186", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:55.598483", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:55.620643", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:55.621933", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:55.716119", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:55.717357", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:55.879550", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:55.880935", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:55.891529", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:55.892850", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:42:56.023034", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:42:56.024817", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:13.766969", "level": "INFO", "logger": "simulator", "message": "Progress: 1000 generated, 10000 published, 0 violations", "module": "main", "function": "_generate_and_publish_batch", "line": 169}
+{"timestamp": "2025-12-07T19:43:13.806659", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:13.808036", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:13.815115", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:13.816332", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:13.824873", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:13.826350", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:13.960457", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:13.961786", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:14.048990", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:14.050221", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:14.050452", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:43:15.618588", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:43:15.646041", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:15.647408", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:15.656024", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:15.657339", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:15.657503", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:43:15.912573", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:43:15.926142", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:15.928742", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:15.928896", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:43:15.929599", "level": "INFO", "logger": "simulator", "message": "Simulation complete. Generated: 0, Published: 0, Violations: 0, Elapsed: 0.00s", "module": "main", "function": "shutdown", "line": 191}
+{"timestamp": "2025-12-07T19:43:15.929782", "level": "INFO", "logger": "simulator", "message": "Publisher metrics: {'total_published': 10}", "module": "main", "function": "shutdown", "line": 202}
+{"timestamp": "2025-12-07T19:43:15.944693", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:15.946365", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:15.946514", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:43:16.203510", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:43:16.218834", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:16.220941", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:16.314599", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:16.315862", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:16.475370", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:16.477596", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:16.477721", "level": "INFO", "logger": "simulator", "message": "Received signal None, shutting down...", "module": "main", "function": "_handle_shutdown", "line": 177}
+{"timestamp": "2025-12-07T19:43:16.491274", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:16.492676", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:16.492761", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:43:16.493715", "level": "INFO", "logger": "simulator", "message": "Simulation complete. Generated: 0, Published: 0, Violations: 0, Elapsed: 0.00s", "module": "main", "function": "shutdown", "line": 191}
+{"timestamp": "2025-12-07T19:43:16.494002", "level": "INFO", "logger": "simulator", "message": "Publisher metrics: {'total_published': 10}", "module": "main", "function": "shutdown", "line": 202}
+{"timestamp": "2025-12-07T19:43:16.506307", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:16.507747", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:16.507972", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:43:18.182557", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:43:18.193702", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:18.195280", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:18.195580", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:43:18.362601", "level": "ERROR", "logger": "simulator", "message": "Error during simulation: Test error", "module": "main", "function": "run", "line": 124, "exception": "Traceback (most recent call last):\n  File \"/Users/lisasimon/payments-ingestion/src/simulator/main.py\", line 119, in run\n    await self._generate_and_publish_batch(batch_count)\n  File \"/Users/lisasimon/payments-ingestion/src/simulator/main.py\", line 161, in _generate_and_publish_batch\n    published_count = await self.publisher.publish_batch(transaction_dicts)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/lisasimon/.pyenv/versions/3.12.7/lib/python3.12/unittest/mock.py\", line 2282, in _execute_mock_call\n    raise effect\nException: Test error"}
+{"timestamp": "2025-12-07T19:43:18.363125", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:43:18.371572", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:18.372950", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:18.464309", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:18.465556", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:18.474628", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:18.476436", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:18.476661", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:43:20.018333", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:43:20.028352", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:20.029621", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:20.036402", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:20.037680", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:20.045083", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:20.046411", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:20.131064", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:20.132359", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:20.293749", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:20.295288", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:20.425736", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:20.427816", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:36.500003", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:36.501483", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:36.583859", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:36.585174", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:36.600525", "level": "INFO", "logger": "simulator", "message": "Progress: 1000 generated, 1000 published, 0 violations", "module": "main", "function": "_generate_and_publish_batch", "line": 169}
+{"timestamp": "2025-12-07T19:43:36.609039", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:36.610812", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:36.618837", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:36.620129", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:36.632622", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:36.633835", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:36.656016", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:36.657386", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:36.750435", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:36.751649", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:36.914895", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:36.916242", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:36.927327", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:36.928899", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:37.012290", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:37.013552", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:52.523660", "level": "INFO", "logger": "simulator", "message": "Progress: 1000 generated, 10000 published, 0 violations", "module": "main", "function": "_generate_and_publish_batch", "line": 169}
+{"timestamp": "2025-12-07T19:43:52.606681", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:52.607968", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:52.614915", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:52.616133", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:52.624458", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:52.625838", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:52.710797", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:52.712337", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:52.796894", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:52.798263", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:52.798485", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:43:54.364745", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:43:54.420469", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:54.421944", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:54.430809", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:54.432049", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:54.432174", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:43:54.686392", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:43:54.701406", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:54.703421", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:54.703553", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:43:54.704360", "level": "INFO", "logger": "simulator", "message": "Simulation complete. Generated: 0, Published: 0, Violations: 0, Elapsed: 0.00s", "module": "main", "function": "shutdown", "line": 191}
+{"timestamp": "2025-12-07T19:43:54.704575", "level": "INFO", "logger": "simulator", "message": "Publisher metrics: {'total_published': 10}", "module": "main", "function": "shutdown", "line": 202}
+{"timestamp": "2025-12-07T19:43:54.719803", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:54.721527", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:54.721701", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:43:54.979532", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:43:54.994929", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:54.996979", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:55.088122", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:55.089449", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:55.250521", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:55.251963", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:55.252047", "level": "INFO", "logger": "simulator", "message": "Received signal None, shutting down...", "module": "main", "function": "_handle_shutdown", "line": 177}
+{"timestamp": "2025-12-07T19:43:55.265426", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:55.266702", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:55.266779", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:43:55.267173", "level": "INFO", "logger": "simulator", "message": "Simulation complete. Generated: 0, Published: 0, Violations: 0, Elapsed: 0.00s", "module": "main", "function": "shutdown", "line": 191}
+{"timestamp": "2025-12-07T19:43:55.267283", "level": "INFO", "logger": "simulator", "message": "Publisher metrics: {'total_published': 10}", "module": "main", "function": "shutdown", "line": 202}
+{"timestamp": "2025-12-07T19:43:55.278887", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:55.280480", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:55.280951", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:43:57.437025", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:43:57.451570", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:57.452851", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:57.452959", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:43:57.608083", "level": "ERROR", "logger": "simulator", "message": "Error during simulation: Test error", "module": "main", "function": "run", "line": 124, "exception": "Traceback (most recent call last):\n  File \"/Users/lisasimon/payments-ingestion/src/simulator/main.py\", line 119, in run\n    await self._generate_and_publish_batch(batch_count)\n  File \"/Users/lisasimon/payments-ingestion/src/simulator/main.py\", line 161, in _generate_and_publish_batch\n    published_count = await self.publisher.publish_batch(transaction_dicts)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/lisasimon/.pyenv/versions/3.12.7/lib/python3.12/unittest/mock.py\", line 2282, in _execute_mock_call\n    raise effect\nException: Test error"}
+{"timestamp": "2025-12-07T19:43:57.608583", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:43:57.617410", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:57.618627", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:57.704412", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:57.705718", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:57.716051", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:57.717337", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:57.717441", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:43:59.256231", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:43:59.266015", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:59.267270", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:59.273399", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:59.274850", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:59.282473", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:59.283674", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:59.365590", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:59.366853", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:59.594061", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:59.595583", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:43:59.680319", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:43:59.682343", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:09.837285", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:09.838883", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:09.846163", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:09.847592", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:09.854069", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:09.855511", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:10.018374", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:10.019960", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:10.226776", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:10.229013", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:10.334258", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:10.335553", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:28.094486", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:28.096369", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:28.182731", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:28.184047", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:28.202420", "level": "INFO", "logger": "simulator", "message": "Progress: 1000 generated, 1000 published, 0 violations", "module": "main", "function": "_generate_and_publish_batch", "line": 169}
+{"timestamp": "2025-12-07T19:44:28.211625", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:28.213073", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:28.221097", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:28.222524", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:28.234625", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:28.235837", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:28.258272", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:28.260320", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:28.355281", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:28.356592", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:28.516509", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:28.517812", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:28.529549", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:28.530771", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:28.614139", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:28.615362", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:44.484265", "level": "INFO", "logger": "simulator", "message": "Progress: 1000 generated, 10000 published, 0 violations", "module": "main", "function": "_generate_and_publish_batch", "line": 169}
+{"timestamp": "2025-12-07T19:44:44.523865", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:44.525768", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:44.534115", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:44.535423", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:44.545677", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:44.546895", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:44.632690", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:44.633905", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:44.720364", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:44.721678", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:44.721945", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:44:46.332614", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:44:46.363178", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:46.364479", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:46.373253", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:46.374520", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:46.374716", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:44:46.630996", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:44:46.645618", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:46.648790", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:46.648919", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:44:46.649606", "level": "INFO", "logger": "simulator", "message": "Simulation complete. Generated: 0, Published: 0, Violations: 0, Elapsed: 0.00s", "module": "main", "function": "shutdown", "line": 191}
+{"timestamp": "2025-12-07T19:44:46.649788", "level": "INFO", "logger": "simulator", "message": "Publisher metrics: {'total_published': 10}", "module": "main", "function": "shutdown", "line": 202}
+{"timestamp": "2025-12-07T19:44:46.710204", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:46.711533", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:46.711659", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:44:46.964254", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:44:46.973300", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:46.974730", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:47.065045", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:47.066264", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:47.227525", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:47.229011", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:47.229092", "level": "INFO", "logger": "simulator", "message": "Received signal None, shutting down...", "module": "main", "function": "_handle_shutdown", "line": 177}
+{"timestamp": "2025-12-07T19:44:47.241913", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:47.243591", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:47.243692", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:44:47.244171", "level": "INFO", "logger": "simulator", "message": "Simulation complete. Generated: 0, Published: 0, Violations: 0, Elapsed: 0.00s", "module": "main", "function": "shutdown", "line": 191}
+{"timestamp": "2025-12-07T19:44:47.244382", "level": "INFO", "logger": "simulator", "message": "Publisher metrics: {'total_published': 10}", "module": "main", "function": "shutdown", "line": 202}
+{"timestamp": "2025-12-07T19:44:47.256369", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:47.259463", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:47.259853", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:44:48.820840", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:44:48.831535", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:48.832829", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:48.833083", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:44:48.986672", "level": "ERROR", "logger": "simulator", "message": "Error during simulation: Test error", "module": "main", "function": "run", "line": 124, "exception": "Traceback (most recent call last):\n  File \"/Users/lisasimon/payments-ingestion/src/simulator/main.py\", line 119, in run\n    await self._generate_and_publish_batch(batch_count)\n  File \"/Users/lisasimon/payments-ingestion/src/simulator/main.py\", line 161, in _generate_and_publish_batch\n    published_count = await self.publisher.publish_batch(transaction_dicts)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/lisasimon/.pyenv/versions/3.12.7/lib/python3.12/unittest/mock.py\", line 2282, in _execute_mock_call\n    raise effect\nException: Test error"}
+{"timestamp": "2025-12-07T19:44:48.987206", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:44:48.996315", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:48.997534", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:49.082450", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:49.083663", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:49.093458", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:49.094800", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:49.094913", "level": "INFO", "logger": "simulator", "message": "Starting transaction generation", "module": "main", "function": "run", "line": 94}
+{"timestamp": "2025-12-07T19:44:50.666339", "level": "INFO", "logger": "simulator", "message": "Shutting down simulator...", "module": "main", "function": "shutdown", "line": 182}
+{"timestamp": "2025-12-07T19:44:50.675613", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:50.676990", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:50.684367", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:50.685610", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:50.692758", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:50.694145", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:50.777587", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:50.778822", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:50.937482", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:50.938969", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}
+{"timestamp": "2025-12-07T19:44:51.023133", "level": "INFO", "logger": "simulator", "message": "Initializing Payment Data Simulator", "module": "main", "function": "initialize", "line": 63}
+{"timestamp": "2025-12-07T19:44:51.024533", "level": "INFO", "logger": "simulator", "message": "Simulator initialized successfully", "module": "main", "function": "initialize", "line": 80}

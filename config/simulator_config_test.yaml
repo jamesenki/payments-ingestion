@@ -1,0 +1,94 @@
+# Test configuration for local simulator testing
+# This config generates transactions and writes them to a file
+
+simulator:
+  output:
+    destination: "file"
+    file_path: "output/transactions.jsonl"
+    format: "jsonl"  # jsonl or json_array
+    append: false
+    batch_size: 50
+    rate_limit: 100  # transactions per second
+  
+  transaction:
+    volume:
+      total: 100  # Generate 100 transactions for testing
+      rate: 50    # 50 transactions per second
+    
+    variability:
+      amounts:
+        distribution: "normal"
+        mean: 100.00
+        std_dev: 50.00
+        min: 1.00
+        max: 1000.00
+      
+      payment_methods:
+        credit_card: 0.50
+        debit_card: 0.30
+        bank_transfer: 0.10
+        digital_wallet: 0.05
+        cryptocurrency: 0.03
+        cash_equivalent: 0.02
+      
+      payment_status:
+        completed: 0.85
+        declined: 0.10
+        timeout: 0.03
+        error: 0.02
+      
+      currencies:
+        USD: 0.60
+        EUR: 0.20
+        GBP: 0.10
+        JPY: 0.05
+        CAD: 0.03
+        AUD: 0.02
+      
+      countries:
+        US: 0.40
+        GB: 0.15
+        DE: 0.10
+        FR: 0.08
+        CA: 0.07
+        AU: 0.05
+        JP: 0.05
+        other: 0.10
+      
+      merchant_categories:
+        retail: 0.30
+        food_beverage: 0.15
+        travel: 0.12
+        entertainment: 0.10
+        technology: 0.08
+        healthcare: 0.07
+        education: 0.06
+        other: 0.12
+
+compliance:
+  enabled: true
+  total_violation_percentage: 0.10  # 10% of transactions will have violations
+  
+  violation_types:
+    aml:
+      enabled: true
+      percentage: 0.03
+    kyc:
+      enabled: true
+      percentage: 0.02
+    pci:
+      enabled: true
+      percentage: 0.02
+    data_quality:
+      enabled: true
+      percentage: 0.02
+    business_rules:
+      enabled: true
+      percentage: 0.01
+
+logging:
+  level: "INFO"
+  format: "text"  # text or json
+  file: null
+  include_metrics: true
+
