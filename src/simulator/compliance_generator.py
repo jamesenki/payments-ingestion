@@ -297,6 +297,10 @@ class ComplianceViolationGenerator:
     
     def _determine_severity(self, violations: List[str]) -> str:
         """Determine violation severity based on violation types."""
+        # Return "NONE" if no violations
+        if not violations:
+            return "NONE"
+        
         critical_violations = ["aml_large_amount", "pci_missing_card_data"]
         high_violations = ["aml_structuring", "kyc_missing_customer_id"]
         medium_violations = ["data_quality_negative_amount", "data_quality_zero_amount"]

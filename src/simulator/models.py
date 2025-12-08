@@ -8,6 +8,11 @@ from datetime import datetime
 from decimal import Decimal
 import uuid
 
+# Constants for "not set" values (instead of null)
+NOT_SET_TIMESTAMP = "NOT_SET"
+NOT_SET_SEVERITY = "NONE"
+NOT_SET_STRING = ""
+
 
 class Transaction(BaseModel):
     """
@@ -15,8 +20,8 @@ class Transaction(BaseModel):
     """
     transaction_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     transaction_timestamp: datetime = Field(default_factory=datetime.now)
-    ingestion_timestamp: Optional[datetime] = None
-    processing_timestamp: Optional[datetime] = None
+    ingestion_timestamp: Optional[datetime] = None  # Will be converted to NOT_SET_TIMESTAMP in serialization
+    processing_timestamp: Optional[datetime] = None  # Will be converted to NOT_SET_TIMESTAMP in serialization
     amount: Decimal = Field(...)  # Amount (may be negative/zero for compliance testing)
     currency: str = Field(..., min_length=3, max_length=3)
     payment_method: str
@@ -34,7 +39,7 @@ class Transaction(BaseModel):
     
     # Compliance tracking (not in database, for simulator use)
     compliance_violations: List[str] = Field(default_factory=list)
-    violation_severity: Optional[str] = None  # low, medium, high, critical
+    violation_severity: Optional[str] = None  # low, medium, high, critical, or NOT_SET_SEVERITY
     
     class Config:
         """Pydantic configuration."""
@@ -78,10 +83,26 @@ class Transaction(BaseModel):
         # Convert datetime and Decimal for JSON
         if isinstance(data.get('transaction_timestamp'), datetime):
             data['transaction_timestamp'] = data['transaction_timestamp'].isoformat()
-        if isinstance(data.get('ingestion_timestamp'), datetime):
+        
+        # Convert None timestamps to NOT_SET string
+        if data.get('ingestion_timestamp') is None:
+            data['ingestion_timestamp'] = NOT_SET_TIMESTAMP
+        elif isinstance(data.get('ingestion_timestamp'), datetime):
             data['ingestion_timestamp'] = data['ingestion_timestamp'].isoformat()
-        if isinstance(data.get('processing_timestamp'), datetime):
+        
+        if data.get('processing_timestamp') is None:
+            data['processing_timestamp'] = NOT_SET_TIMESTAMP
+        elif isinstance(data.get('processing_timestamp'), datetime):
             data['processing_timestamp'] = data['processing_timestamp'].isoformat()
+        
+        # Convert None violation_severity to NOT_SET string
+        if data.get('violation_severity') is None:
+            data['violation_severity'] = NOT_SET_SEVERITY
+        
+        # Convert None strings to NOT_SET_STRING (empty string for optional fields)
+        # Note: We keep None for truly optional fields that may not exist
+        # Only convert fields that should always have a value
+        
         if isinstance(data.get('amount'), Decimal):
             data['amount'] = float(data['amount'])
         return data
