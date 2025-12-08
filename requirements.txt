@@ -32,3 +32,6 @@ pyarrow>=14.0.0
 # Kafka consumer support
 kafka-python>=2.0.2
 
+# Azure Functions (optional, for local testing)
+azure-functions>=1.18.0
+
