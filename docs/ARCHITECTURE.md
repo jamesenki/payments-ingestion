@@ -55,15 +55,28 @@ The Payments Ingestion system is a cloud-native, event-driven architecture built
                          │ Writes Data
                          ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│              Azure Database for PostgreSQL                       │
+│              Hybrid Storage Architecture                          │
+│                                                                   │
 │  ┌──────────────────────────────────────────────────────────┐  │
-│  │  Server: payments-ingestion-{env}-psql-eus               │  │
+│  │  Azure Blob Storage (Raw Events)                          │  │
 │  │  ┌────────────────────────────────────────────────────┐  │  │
-│  │  │  Database: payments_db                             │  │  │
-│  │  │  Tables:                                           │  │  │
-│  │  │  1. NormalizedTransactions (raw data)             │  │  │
-│  │  │  2. DynamicMetrics (calculated metrics)           │  │  │
-│  │  │  3. payment_metrics_5m (time-series aggregates)   │  │  │
+│  │  │  Container: raw-events                              │  │  │
+│  │  │  Format: Parquet files                              │  │  │
+│  │  │  Partition: yyyy={year}/mm={month}/dd={day}/       │  │  │
+│  │  │  Lifecycle: Hot → Cool → Archive                    │  │  │
+│  │  └────────────────────────────────────────────────────┘  │  │
+│  └──────────────────────────────────────────────────────────┘  │
+│                                                                   │
+│  ┌──────────────────────────────────────────────────────────┐  │
+│  │  Azure Database for PostgreSQL (Metrics)                 │  │
+│  │  ┌────────────────────────────────────────────────────┐  │  │
+│  │  │  Server: payments-ingestion-{env}-psql-eus           │  │  │
+│  │  │  Database: payments_db                               │  │  │
+│  │  │  Tables:                                            │  │  │
+│  │  │  1. dynamic_metrics (per-transaction metrics)      │  │  │
+│  │  │  2. payment_metrics_5m (5-min aggregates)         │  │  │
+│  │  │  3. aggregate_histograms (distribution data)       │  │  │
+│  │  │  4. failed_items (dead-letter queue)               │  │  │
 │  │  └────────────────────────────────────────────────────┘  │  │
 │  └──────────────────────────────────────────────────────────┘  │
 └─────────────────────────────────────────────────────────────────┘
@@ -72,6 +85,7 @@ The Payments Ingestion system is a cloud-native, event-driven architecture built
                          ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │                    Storage Account                               │
+│  - Blob Storage (raw events)                                    │
 │  - Archives                                                      │
 │  - Audit Logs                                                    │
 │  - Backups                                                       │
@@ -129,9 +143,44 @@ The Payments Ingestion system is a cloud-native, event-driven architecture built
 2. **Metric Calculator** - Computes dynamic business metrics
 3. **Aggregator** - Creates 5-minute time-series summaries
 
-### 3. Azure Database for PostgreSQL (Storage Layer)
+### 3. Hybrid Storage Architecture
 
-**Purpose:** Relational database for structured payment data and metrics
+**Purpose:** Efficient storage strategy combining Blob Storage for raw events and PostgreSQL for processed metrics
+
+#### 3.1 Azure Blob Storage (Raw Events)
+
+**Purpose:** High-volume, cost-effective storage for raw transaction events
+
+**Key Features:**
+- **Parquet Format:** Columnar storage optimized for analytics
+- **Partitioning:** Date-based folder structure (`yyyy={year}/mm={month}/dd={day}/`)
+- **Lifecycle Management:** Automated tiering (Hot → Cool → Archive) and retention policies
+- **Cost Efficiency:** Significantly cheaper than PostgreSQL for large volumes
+- **Scalability:** Scales to petabytes without performance degradation
+
+**Configuration by Environment:**
+| Feature | Dev | Staging | Production |
+|---------|-----|---------|------------|
+| Container | raw-events | raw-events | raw-events |
+| Hot Tier Retention | 7 days | 7 days | 7 days |
+| Cool Tier Retention | 30 days | 30 days | 30 days |
+| Archive Tier Retention | 90 days | 180 days | 365 days |
+| Compression | Snappy | Snappy | Snappy |
+
+**Storage Structure:**
+```
+raw-events/
+├── yyyy=2025/
+│   ├── mm=12/
+│   │   ├── dd=07/
+│   │   │   ├── events_20251207_000000.parquet
+│   │   │   ├── events_20251207_010000.parquet
+│   │   │   └── ...
+```
+
+#### 3.2 Azure Database for PostgreSQL (Metrics)
+
+**Purpose:** Relational database for processed metrics and aggregates
 
 **Key Features:**
 - **Flexible Server:** Latest PostgreSQL deployment option
@@ -148,32 +197,44 @@ The Payments Ingestion system is a cloud-native, event-driven architecture built
 | HA Mode | Disabled | ZoneRedundant | ZoneRedundant |
 | Geo-Redundant | No | Yes | Yes |
 
-**Database Schema (Phase 2):**
+**Database Schema:**
 ```
 payments_db
-├── NormalizedTransactions  (fact table)
-│   ├── transaction_id (PK)
-│   ├── timestamp
-│   ├── amount
-│   ├── currency
-│   ├── payment_method
-│   └── metadata (JSONB)
-│
-├── DynamicMetrics (derived metrics)
+├── dynamic_metrics (per-transaction metrics)
 │   ├── metric_id (PK)
-│   ├── transaction_id (FK)
-│   ├── metric_name
+│   ├── transaction_id
+│   ├── correlation_id (UUID)
+│   ├── metric_type
 │   ├── metric_value
-│   └── calculated_at
+│   ├── metric_data (JSONB)
+│   └── created_at
 │
-└── payment_metrics_5m (time-series)
-    ├── window_start (PK)
-    ├── total_count
-    ├── total_amount
-    ├── avg_amount
-    ├── payment_method_breakdown
-    └── currency_breakdown
+├── payment_metrics_5m (5-minute aggregates)
+│   ├── window_start (PK)
+│   ├── window_end
+│   ├── total_count
+│   ├── total_amount
+│   ├── avg_amount
+│   ├── payment_method_breakdown (JSONB)
+│   └── currency_breakdown (JSONB)
+│
+├── aggregate_histograms (distribution data)
+│   ├── histogram_id (PK)
+│   ├── window_start
+│   ├── metric_type
+│   ├── histogram_data (JSONB)
+│   └── created_at
+│
+└── failed_items (dead-letter queue)
+    ├── failed_id (PK)
+    ├── transaction_id
+    ├── error_type
+    ├── error_message
+    ├── raw_payload (JSONB)
+    └── failed_at
 ```
+
+**Note:** Raw transaction events are stored in Blob Storage as Parquet files, not in PostgreSQL. See [ADR-006](./adr/006-hybrid-storage-architecture.md) for architectural rationale.
 
 ### 4. Storage Account (Support Layer)
 
@@ -194,7 +255,7 @@ payments_db
 | Retention | 7 days | 14 days | 30 days |
 
 **Containers:**
-- `payments-data` - Raw transaction data archives
+- `raw-events` - Raw transaction events (Parquet files) - **Primary storage for normalized transactions**
 - `processed-payments` - Processed data exports
 - `archives` - Long-term storage
 - `audit-logs` - Compliance and audit trails
@@ -225,20 +286,22 @@ Function Trigger → Normalize → Validate → Transform → Store
 2. Normalize transaction structure
 3. Validate against business rules
 4. Transform and enrich data
-5. Write to PostgreSQL tables
+5. Store raw event to Blob Storage (Parquet)
+6. Calculate and store metrics to PostgreSQL
 
 ### 3. Metrics Flow
 
 ```
-Transaction Data → Calculate Metrics → Aggregate → Store
+Raw Event (Blob Storage) → Extract → Calculate Metrics → Aggregate → Store (PostgreSQL)
 ```
 
 **Steps:**
-1. Read normalized transactions
-2. Apply metric derivation rules
-3. Calculate dynamic metrics
-4. Aggregate into time windows
-5. Store in time-series table
+1. Read raw event from Blob Storage (or from processing pipeline)
+2. Extract transaction data
+3. Apply metric derivation rules
+4. Calculate dynamic metrics (store in `dynamic_metrics` table)
+5. Aggregate into time windows (store in `payment_metrics_5m` table)
+6. Generate histograms (store in `aggregate_histograms` table)
 
 ## Network Architecture
 

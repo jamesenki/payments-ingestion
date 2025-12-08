@@ -15,6 +15,11 @@ An Architecture Decision Record (ADR) captures an important architectural decisi
 | [ADR-003](./003-github-actions-for-cicd.md) | Use GitHub Actions for CI/CD | Accepted | 2025-12-04 |
 | [ADR-004](./004-postgresql-flexible-server.md) | Use Azure PostgreSQL Flexible Server | Accepted | 2025-12-04 |
 | [ADR-005](./005-multi-environment-strategy.md) | Multi-Environment Deployment Strategy | Accepted | 2025-12-04 |
+| [ADR-006](./006-hybrid-storage-architecture.md) | Hybrid Storage Architecture (Parquet + Blob Storage) | Accepted | 2025-12-07 |
+| [ADR-007](./007-file-publisher-for-local-testing.md) | File Publisher for Local Simulator Testing | Accepted | 2025-12-07 |
+| [ADR-008](./008-comprehensive-testing-strategy.md) | Comprehensive Testing Strategy with 90% Coverage Target | Accepted | 2025-12-07 |
+| [ADR-009](./009-conditional-imports-for-external-dependencies.md) | Conditional Imports for External Dependencies | Accepted | 2025-12-07 |
+| [ADR-010](./010-message-consumer-abstraction.md) | Message Consumer Abstraction for Event Hubs and Kafka | Accepted | 2025-12-07 |
 
 ## ADR Template
 
