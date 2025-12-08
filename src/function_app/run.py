@@ -280,6 +280,11 @@ def _update_payment_metrics_5m(transaction: ParsedTransaction) -> bool:
             payment_method = transaction.metadata.get("payment_method", "unknown")
             payment_status = str(transaction.status.value)
             
+            # Determine status counts based on transaction status
+            completed_count = 1 if transaction.status.value == "success" else 0
+            failed_count = 1 if transaction.status.value == "failed" else 0
+            pending_count = 1 if transaction.status.value == "pending" else 0
+            
             # UPSERT operation
             cursor.execute("""
                 INSERT INTO payment_metrics_5m (
@@ -293,9 +298,12 @@ def _update_payment_metrics_5m(transaction: ParsedTransaction) -> bool:
                     avg_amount,
                     min_amount,
                     max_amount,
+                    completed_count,
+                    failed_count,
+                    pending_count,
                     created_at,
                     updated_at
-                ) VALUES (%s, %s, %s, %s, %s, 1, %s, %s, %s, %s, %s, %s)
+                ) VALUES (%s, %s, %s, %s, %s, 1, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                 ON CONFLICT (window_start, payment_method, currency, payment_status)
                 DO UPDATE SET
                     total_count = payment_metrics_5m.total_count + 1,
@@ -304,6 +312,9 @@ def _update_payment_metrics_5m(transaction: ParsedTransaction) -> bool:
                                  / (payment_metrics_5m.total_count + 1),
                     min_amount = LEAST(payment_metrics_5m.min_amount, EXCLUDED.min_amount),
                     max_amount = GREATEST(payment_metrics_5m.max_amount, EXCLUDED.max_amount),
+                    completed_count = payment_metrics_5m.completed_count + EXCLUDED.completed_count,
+                    failed_count = payment_metrics_5m.failed_count + EXCLUDED.failed_count,
+                    pending_count = payment_metrics_5m.pending_count + EXCLUDED.pending_count,
                     updated_at = EXCLUDED.updated_at
             """, (
                 window_start,
@@ -315,6 +326,9 @@ def _update_payment_metrics_5m(transaction: ParsedTransaction) -> bool:
                 transaction.amount,
                 transaction.amount,
                 transaction.amount,
+                completed_count,
+                failed_count,
+                pending_count,
                 datetime.utcnow(),
                 datetime.utcnow()
             ))

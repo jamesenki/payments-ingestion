@@ -10,7 +10,7 @@ from datetime import datetime
 from unittest.mock import Mock, patch, MagicMock
 from uuid import uuid4
 
-from function_app.run import process_transaction_local
+from src.function_app.run import process_transaction_local
 from function_app.parsing.models import ParsedTransaction, TransactionStatus, ParseResult
 
 
